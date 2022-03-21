@@ -1,5 +1,13 @@
+:root {
+  --dark-blue-color: #1C2C54;
+  --yellow-color: #F2CF41;
+  --grey-color: #242424;
+  --light-blue: #303C64;
+  --white: #FFFFFF;
+}
+
 body {
-  background-color: #1C2C54;
+  background-color: var(--dark-blue-color);
 }
 
 .headerContainer {
@@ -16,12 +24,12 @@ body {
 }
 
 .titleHeaderContainer {
-  background-color: #242424;
+  background-color: var(--grey-color);
   padding: 20px;
-  color: #F2CF41;
+  color: var(--yellow-color);
 }
 
-p, .titleHeader {
+p {
   margin: 0;
   text-align: center;
   font-size: large;
@@ -35,21 +43,21 @@ p, .titleHeader {
   flex-direction: column;
 }
 
-.infoContainer {
+.contentContainer {
   margin: 2em;
-  border: 2px solid #F2CF41;
-  height: 200px;
+  border: 2px solid var(--yellow-color);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--light-blue);
 }
 
-.infoTitleContainer {
-  background-color: #F2CF41;
+.contentTitleContainer {
+  background-color: var(--yellow-color);
   border-radius: 10px;
   padding: 15px 50px;
-  color: #1C2C54;
+  color: var(--dark-blue-color);
   font-weight: bold;
   width: 9em;
   position: absolute;
@@ -57,10 +65,24 @@ p, .titleHeader {
 }
 
 .infoMusee {
-  color: #F2CF41;
-  margin-top: 100px;
+  color: var(--yellow-color);
+  margin: 1em;
 }
 
 .infoMusee > span {
   color: lawngreen;
+}
+
+.meteoContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3em;
+  justify-content: space-between;
+}
+
+.meteo {
+  background-color: var(--white);
+  opacity: 50%;
+  border-radius: 10px;
+  padding: 50px 15px;
 }

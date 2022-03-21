@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from "./features/layout";
+import Layout from "./features/layout/layout";
 
 function App() {
   return (
@@ -8,14 +8,14 @@ function App() {
         <div className="App">
           <Routes>
               <Route path="/" element={<Layout />}>
-                  <Route index element={} />
-                  <Route path="weather" element={}/>
-                  <Route path="picture_gallery" element={}/>
-                  <Route path="boats" element={}>
-                      <Route index element={} />
-                      <Route path=":boatId" element={}>
-                          <Route index element={} />
-                          <Route path="schedule" element={}/>
+                  <Route index/>
+                  <Route path="weather"/>
+                  <Route path="picture_gallery"/>
+                  <Route path="boats">
+                      <Route index/>
+                      <Route path=":boatId">
+                          <Route index/>
+                          <Route path="schedule"/>
                       </Route>
                   </Route>
               </Route>

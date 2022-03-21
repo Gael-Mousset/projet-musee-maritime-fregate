@@ -1,9 +1,9 @@
 const Header = () => {
     return (
         <>
-            <div className="header">
-                <div className="titleHeader">
-                    Bassin à flot histoire et témoignages
+            <div className="headerContainer">
+                <div className="titleHeaderContainer">
+                    <p className="titleHeader">Bassin à flot histoire et témoignages</p>
                 </div>
             </div>
         </>

@@ -1,6 +1,7 @@
 import Map from "./map";
 
 const Home = () => {
+
     return (
         <>
             <div className="main">

@@ -1,38 +1,76 @@
-.App {
+:root {
+  --dark-blue-color: #1C2C54;
+  --yellow-color: #F2CF41;
+  --grey-color: #242424;
+  --light-blue: #303C64;
+  --white: #FFFFFF;
+}
+
+body {
+  background-color: var(--dark-blue-color);
+}
+
+.headerContainer {
+  width: 100%;
+  height: 200px;
+  /*background-image: url("../public/images/headerImage/musee-maritime.jpeg");*/
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position-x: 25%;
+  background-position-y: 50%;
+  display: grid !important;
+  align-items: end !important;
+}
+
+.titleHeaderContainer {
+  background-color: var(--grey-color);
+  padding: 20px;
+  color: var(--yellow-color);
+}
+
+p {
+  margin: 0;
   text-align: center;
+  font-size: large;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  margin: auto;
+  max-width: 800px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contentContainer {
+  margin: 2em;
+  border: 2px solid var(--yellow-color);
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--light-blue);
+  padding-top: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.contentTitleContainer {
+  background-color: var(--yellow-color);
+  border-radius: 10px;
+  padding: 15px 50px;
+  color: var(--dark-blue-color);
+  font-weight: bold;
+  width: 9em;
+  position: absolute;
+  top: -25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#mapContainer{
+  height: 200px;
+  width: 200px;
+}
+
+#mapContainer2{
+  height: 100px;
+  width: 100px;
 }

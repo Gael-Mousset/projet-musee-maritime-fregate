@@ -29,9 +29,9 @@ const Map = () => {
                 </div>
                 <div id={"mapContainer"}>
                     <MapContainer
-                        center={Angoumois}
-                        zoom={13}
-                        scrollWheelZoom={true}>
+                        center={Vedette_Duperré}
+                        zoom={18}
+                        scrollWheelZoom={false}>
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

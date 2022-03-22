@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./features/layout/layout";
+import BoatDetails from "./features/boats/BoatDetails";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
                   <Route path="picture_gallery"/>
                   <Route path="boats">
                       <Route index/>
-                      <Route path=":boatId">
+                      <Route path=":boatId" element={<BoatDetails />}>
                           <Route index/>
                           <Route path="schedule"/>
                       </Route>

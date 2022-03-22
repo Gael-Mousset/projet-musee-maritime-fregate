@@ -37,7 +37,6 @@ p {
 
 .main {
   margin: auto;
-  margin-top: 2em;
   max-width: 900px;
   width: 95%;
   display: flex;
@@ -45,7 +44,7 @@ p {
 }
 
 .contentContainer {
-  margin: 1em;
+  margin-top: 5em;
   border: 2px solid var(--yellow-color);
   position: relative;
   display: flex;

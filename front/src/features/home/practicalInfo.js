@@ -1,3 +1,5 @@
+/* Importer weather */
+
 const PracticalInfo = () => {
     return (
         <>

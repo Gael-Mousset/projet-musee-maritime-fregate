@@ -6,6 +6,41 @@
   --white: #FFFFFF;
 }
 
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 body {
   background-color: var(--dark-blue-color);
 }
@@ -22,6 +57,84 @@ body {
   display: grid !important;
   align-items: end !important;
 }
+
+.App-link {
+  color: #61dafb;
+}
+
+#TitleBoat
+{
+  padding: 20px;
+  color: #F2CF41;
+}
+
+#TitleBoat h1
+{
+  background-color: #F2CF41;
+  border-radius: 10px;
+  padding: 15px 50px;
+  color: #1C2C54;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: absolute;
+  top: 160px;
+}
+
+
+
+#ImageBoat
+{
+  width: 100%;
+  height: 200px;
+  background-image: url("../public/images/headerImage/musee-maritime.jpeg");
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position-x: 25%;
+  background-position-y: 50%;
+}
+
+#Description
+{
+  margin: 15px;
+}
+
+#Description p
+{
+  color: #F2CF41;
+  text-align: left;
+  font-size: 15px;
+
+}
+
+#SousTitle
+{
+  padding-left: 1em;
+  width: 45%;
+  border-radius: 0 10px 10px 0;
+  background-color: #F2CF41;
+  color: #1C2C54;
+  font-weight: bold;
+  font-size: 0.6em;
+  text-align: left;
+}
+
+#Barre
+{
+  padding-bottom: 1px;
+  background-color: #F2CF41;
+}
+
+#Caracteristiques
+{
+  color: #F2CF41;
+}
+
+h1
+{
+  margin:0 1em 0 0;
+}
+
 
 .titleHeaderContainer {
   background-color: var(--grey-color);

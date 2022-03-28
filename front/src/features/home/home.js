@@ -1,3 +1,4 @@
+import Map from "./map";
 import Header from "../header/header";
 import PracticalInfo from "./practicalInfo";
 
@@ -7,6 +8,7 @@ const Home = () => {
             <Header />
             <div className="main">
                 <PracticalInfo />
+                <Map/>
             </div>
         </>
     )

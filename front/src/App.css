@@ -1,4 +1,3 @@
-
 .leaflet-container {
   width: 100%;
   height: 100%;
@@ -20,7 +19,7 @@ body {
 .headerContainer {
   width: 100%;
   height: 200px;
-  /*background-image: url("../public/images/headerImage/musee-maritime.jpeg");*/
+  background-image: url("../public/images/headerImage/musee-maritime.jpeg");
   background-size: cover;
   background-origin: border-box;
   background-repeat: no-repeat;
@@ -85,6 +84,40 @@ p {
 
 .leaflet-popup-content{
   color: var(--yellow-color);
+}
+
+.infoMusee {
+  color: var(--yellow-color);
+  margin: 1em;
+}
+
+.infoMusee > span {
+  color: lawngreen;
+}
+
+.meteoContainer {
+  display: flex;
+  flex-direction: row;
+  width: 275px;
+  justify-content: space-between;
+}
+
+.meteo {
+  background-color: var(--white);
+  opacity: 50%;
+  border-radius: 10px;
+  width: 45%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meteo > div {
+  margin: 1em;
+  color: var(--dark-blue-color);
+  font-weight: bold;
 }
 
 .request-popup p{

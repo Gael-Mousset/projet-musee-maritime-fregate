@@ -32,11 +32,6 @@ class Boat
     private $isAvailable;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $geolocation;
-
-    /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $description;
@@ -116,6 +111,16 @@ class Boat
      */
     private $testimonials;
 
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $lat;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $lon;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -148,18 +153,6 @@ class Boat
     public function setIsAvailable(bool $isAvailable): self
     {
         $this->isAvailable = $isAvailable;
-
-        return $this;
-    }
-
-    public function getGeolocation(): ?string
-    {
-        return $this->geolocation;
-    }
-
-    public function setGeolocation(string $geolocation): self
-    {
-        $this->geolocation = $geolocation;
 
         return $this;
     }
@@ -406,6 +399,30 @@ class Boat
                 $testimonial->setBoat(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getLat(): ?float
+    {
+        return $this->lat;
+    }
+
+    public function setLat(float $lat): self
+    {
+        $this->lat = $lat;
+
+        return $this;
+    }
+
+    public function getLon(): ?float
+    {
+        return $this->lon;
+    }
+
+    public function setLon(float $lon): self
+    {
+        $this->lon = $lon;
 
         return $this;
     }

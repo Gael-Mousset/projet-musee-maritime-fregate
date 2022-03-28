@@ -78,3 +78,26 @@ p {
   margin-bottom: 50px;
 }
 
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background-color: var(--light-blue) !important;
+  max-width: 20em;
+}
+
+.leaflet-popup-content{
+  color: var(--yellow-color);
+}
+
+.request-popup p{
+  font-size: 100%;
+  color: var(--yellow-color)!important;
+}
+.titleBoat a{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-content: center;
+  text-decoration-color: var(--yellow-color);
+  color: var(--yellow-color)!important;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}

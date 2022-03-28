@@ -1,6 +1,7 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import {CustomPopup,MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import styled from "styled-components";
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
@@ -37,43 +38,59 @@ const Map = () => {
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         <Marker position={Angoumois}>
-                            <Popup>
-                                Angoumois
+                            <Popup className="request-popup">
+                                <div className="titleBoat"> <a href={"https://takeb1nzyto.space/"}>Angoumois</a></div>
+                                    <p>coucou je suis le bateaueg hrilghdfugergdf ghhilg</p>
+                                    <p>Monter à bord : V</p>
                             </Popup>
                         </Marker>
                         <Marker position={leverger}>
-                            <Popup>
-                                leverger
+                            <Popup className="request-popup">
+                                <div className="titleBoat"><a href={"https://takeb1nzyto.space/"}>Leverger</a></div>
+                                <p>coucou je suis le bateaueg hrilghdfugergdf ghhilg</p>
+                                <p>Monter à bord : V</p>
                             </Popup>
                         </Marker>
                         <Marker position={drague}>
-                            <Popup>
-                                drague
+                            <Popup className="request-popup">
+                                <div className="titleBoat"><a href={"https://takeb1nzyto.space/"}>Drague</a></div>
+                                <p>coucou je suis le bateaueg hrilghdfugergdf ghhilg</p>
+                                <p>Monter à bord : V</p>
                             </Popup>
                         </Marker>
                         <Marker position={France_1}>
-                            <Popup>
-                                France_1
+                            <Popup className="request-popup">
+                                <div className="titleBoat"><a href={"https://takeb1nzyto.space/"}>France 1</a></div>
+                                <p>coucou je suis le bateaueg hrilghdfugergdf ghhilg</p>
+                                <p>Monter à bord : V</p>
                             </Popup>
                         </Marker>
                         <Marker position={Saint_Gilles}>
-                            <Popup>
-                                Saint_Gilles
+                            <Popup className="request-popup">
+                                <div className="titleBoat"><a href={"https://takeb1nzyto.space/"}>Saint Gilles</a></div>
+                                <p>coucou je suis le bateaueg hrilghdfugergdf ghhilg</p>
+                                <p>Monter à bord : V</p>
                             </Popup>
                         </Marker>
                         <Marker position={Manuel_Joël}>
-                            <Popup>
-                                Manuel_Joël
+                            <Popup className="request-popup">
+                                <div className="titleBoat"> <a href={"https://takeb1nzyto.space/"}>Manuel Joël</a></div>
+                                <p>coucou je suis le bateaueg hrilghdfugergdf ghhilg</p>
+                                <p>Monter à bord : V</p>
                             </Popup>
                         </Marker>
                         <Marker position={Vedette_Duperré}>
-                            <Popup>
-                                Vedette_Duperré
+                            <Popup className="request-popup">
+                                <div className="titleBoat"><a href={"https://takeb1nzyto.space/"}>Vedette Duperré</a></div>
+                                <p>coucou je suis le bateaueg hrilghdfugergdf ghhilg</p>
+                                <p>Monter à bord : V</p>
                             </Popup>
                         </Marker>
                         <Marker position={Joshua}>
-                            <Popup>
-                                Joshua
+                            <Popup className="request-popup">
+                                <div className="titleBoat"><a href={"https://takeb1nzyto.space/"}>Joshua</a></div>
+                                <p>coucou je suis le bateaueg hrilghdfugergdf ghhilg</p>
+                                <p>Monter à bord : V</p>
                             </Popup>
                         </Marker>
                     </MapContainer>

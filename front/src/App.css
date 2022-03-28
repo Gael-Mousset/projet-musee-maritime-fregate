@@ -1,44 +1,15 @@
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
 :root {
   --dark-blue-color: #1C2C54;
   --yellow-color: #F2CF41;
   --grey-color: #242424;
   --light-blue: #303C64;
   --white: #FFFFFF;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 body {
@@ -135,7 +106,6 @@ h1
   margin:0 1em 0 0;
 }
 
-
 .titleHeaderContainer {
   background-color: var(--grey-color);
   padding: 20px;
@@ -178,6 +148,21 @@ p {
   top: -25px;
 }
 
+#mapContainer{
+  height: 300px;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background-color: var(--light-blue) !important;
+  max-width: 20em;
+}
+
+.leaflet-popup-content{
+  color: var(--yellow-color);
+}
+
 .infoMusee {
   color: var(--yellow-color);
   margin: 1em;
@@ -210,4 +195,19 @@ p {
   margin: 1em;
   color: var(--dark-blue-color);
   font-weight: bold;
+}
+
+.request-popup p{
+  font-size: 100%;
+  color: var(--yellow-color)!important;
+}
+.titleBoat a{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-content: center;
+  text-decoration-color: var(--yellow-color);
+  color: var(--yellow-color)!important;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
 }

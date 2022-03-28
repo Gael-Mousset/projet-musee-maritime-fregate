@@ -15,14 +15,14 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 const Map = () => {
     const boats = [
-        {title: "Angoumois", latlong:[46.150682, -1.151594]},
-        {title: "leverger", latlong:[46.150787, -1.152053]},
-        {title: "drague", latlong:[46.158765, -1.210208]},
-        {title: "France 1", latlong:[46.151182, -1.151787]},
-        {title: "Saint Gilles", latlong:[46.151193, -1.151581]},
-        {title: "Manuel Joël", latlong:[46.150715, -1.151937]},
-        {title: "Vedette Duperré", latlong:[46.151009, -1.151626]},
-        {title: "Joshua", latlong:[46.151482, -1.151353]}
+        {title: "Angoumois", latlong:[46.150682, -1.151594],description:"coucou je suis le bateaueg hrilghdfugergdf ghhilg",state:"Monter à bord : V"},
+        {title: "leverger", latlong:[46.150787, -1.152053],description:"coucou je suis le bateaueg hrilghdfugergdf ghhilg",state:"Monter à bord : V"},
+        {title: "drague", latlong:[46.158765, -1.210208],description:"coucou je suis le bateaueg hrilghdfugergdf ghhilg",state:"Monter à bord : V"},
+        {title: "France 1", latlong:[46.151182, -1.151787],description:"coucou je suis le bateaueg hrilghdfugergdf ghhilg",state:"Monter à bord : V"},
+        {title: "Saint Gilles", latlong:[46.151193, -1.151581],description:"coucou je suis le bateaueg hrilghdfugergdf ghhilg",state:"Monter à bord : V"},
+        {title: "Manuel Joël", latlong:[46.150715, -1.151937],description:"coucou je suis le bateaueg hrilghdfugergdf ghhilg",state:"Monter à bord : V"},
+        {title: "Vedette Duperré", latlong:[46.151009, -1.151626],description:"coucou je suis le bateaueg hrilghdfugergdf ghhilg",state:"Monter à bord : V"},
+        {title: "Joshua", latlong:[46.151482, -1.151353],description:"coucou je suis le bateaueg hrilghdfugergdf ghhilg",state:"Monter à bord : V"}
     ]
 
 
@@ -33,8 +33,8 @@ const Map = () => {
                 <Marker position={boat.latlong}>
                     <Popup className="request-popup">
                         <div className="titleBoat"> <a href={"https://takeb1nzyto.space/"}>{boat.title}</a></div>
-                        <p>coucou je suis le bateaueg hrilghdfugergdf ghhilg</p>
-                        <p>Monter à bord : V</p>
+                        <p>{boat.description}</p>
+                        <p>{boat.state}</p>
                     </Popup>
                 </Marker>
 

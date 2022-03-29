@@ -1,10 +1,8 @@
 import React from 'react';
 import {useEffect,useState} from "react";
-import PracticalInfo from "./practicalInfo";
 
 const WeatherApiHome = () => {
     const url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/la%20rochelle/next7days?unitGroup=metric&key=JDBNW7554CZTZM6WLLK72DGKW&contentType=json";
-    //console.log(url);
 
     const [weatherHome, setWeatherHome] = useState(undefined);
 

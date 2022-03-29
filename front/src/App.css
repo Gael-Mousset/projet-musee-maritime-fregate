@@ -27,6 +27,7 @@ body {
   background-position-y: 50%;
   display: grid !important;
   align-items: end !important;
+  position: relative;
 }
 
 .App-link {
@@ -163,6 +164,18 @@ p {
   color: var(--yellow-color);
 }
 
+.contentTitleHeaderContainer {
+  background-color: var(--yellow-color);
+  border-radius: 10px;
+  padding: 1em 3.125em;
+  color: var(--dark-blue-color);
+  font-weight: bold;
+  width: 9em;
+  position: absolute;
+  bottom: -25px;
+  left: 5%;
+}
+
 .infoMusee {
   color: var(--yellow-color);
   margin: 1em;
@@ -177,6 +190,7 @@ p {
   flex-direction: row;
   width: 275px;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
 
 .meteo {
@@ -195,6 +209,9 @@ p {
   margin: 1em;
   color: var(--dark-blue-color);
   font-weight: bold;
+}
+.imgMeteo{
+  height: 3em;
 }
 
 .request-popup p{

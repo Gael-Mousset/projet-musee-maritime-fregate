@@ -228,3 +228,47 @@ p {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
 }
+
+.Navbar
+{
+  background-color: #242424;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  width:100%;
+  flex-direction: column;
+}
+
+.Navbar a
+{
+  text-decoration-line: none;
+  color: white;
+}
+
+.Navbar a:hover
+{
+  opacity: 75%;
+}
+
+.Navbar a
+{
+  margin: 15px;
+  border-bottom: 1px #F2CF41 solid;
+  padding-bottom: 10px;
+  /*background-color: aliceblue;*/
+}
+
+.Navbar div a
+{
+  display: flex;
+  justify-content: center;
+}
+
+#replier
+{
+  display: none;
+}
+
+#bouton {
+  padding: 10px;
+}

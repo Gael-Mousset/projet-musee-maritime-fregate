@@ -87,14 +87,9 @@ class Boat
     private $maxWidth;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255 , nullable=true)
      */
     private $maxDraught;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $propulsion;
 
     /**
      * @ORM\OneToMany(targetEntity=Image::class, mappedBy="boat")
@@ -297,18 +292,6 @@ class Boat
     public function setMaxDraught(string $maxDraught): self
     {
         $this->maxDraught = $maxDraught;
-
-        return $this;
-    }
-
-    public function getPropulsion(): ?string
-    {
-        return $this->propulsion;
-    }
-
-    public function setPropulsion(string $propulsion): self
-    {
-        $this->propulsion = $propulsion;
 
         return $this;
     }

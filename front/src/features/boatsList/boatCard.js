@@ -4,7 +4,16 @@ const BoatCard = () => {
     return (
         <>
             <div className="card">
-                Bateau
+                <div className="imageBoatListContainer">
+
+                </div>
+                <div className="cardTitle">
+                    Bateau
+                </div>
+
+                <button className="detailsButton">
+                    Détails
+                </button>
             </div>
 
         </>

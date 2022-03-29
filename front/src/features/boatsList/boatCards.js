@@ -5,10 +5,22 @@ const BoatCards = () => {
     return (
         <>
             <div className="boatCardsContainer">
-                <BoatCard />
-                <BoatCard />
-                <BoatCard />
-                <BoatCard />
+                <div className="line">
+                    <BoatCard />
+                    <BoatCard />
+                </div>
+                <div className="line">
+                    <BoatCard />
+                    <BoatCard />
+                </div>
+                <div className="line">
+                    <BoatCard />
+                    <BoatCard />
+                </div>
+                <div className="line">
+                    <BoatCard />
+                    <BoatCard />
+                </div>
             </div>
         </>
     )

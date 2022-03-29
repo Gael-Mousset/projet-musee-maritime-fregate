@@ -1,4 +1,3 @@
-// import '../../boatsList_style.css';
 import BoatsHead from "./boatsHead";
 import BoatCards from "./boatCards";
 

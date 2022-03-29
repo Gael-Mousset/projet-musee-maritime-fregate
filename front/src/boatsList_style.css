@@ -1,0 +1,69 @@
+:root {
+    --dark-blue-color: #1C2C54;
+    --yellow-color: #F2CF41;
+    --grey-color: #242424;
+    --light-blue: #303C64;
+    --white: #FFFFFF;
+}
+
+.pageTitle {
+    background-color: var(--yellow-color);
+    border-radius: 10px;
+    padding: 15px;
+    color: var(--dark-blue-color);
+    font-size: 15px;
+    font-weight: bold;
+    width: 155px;
+    position: absolute;
+    top: 175px;
+    left: 20px;
+}
+
+.boatCardsContainer {
+    position: relative;
+    top: 65px;
+    margin: 0 auto;
+    width: 80%;
+    background-color: var(--yellow-color);
+}
+
+.card {
+    background-color: var(--white);
+    display: flex;
+    height: 200px;
+    width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

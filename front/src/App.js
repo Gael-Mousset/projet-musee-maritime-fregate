@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./features/layout/layout";
 import BoatDetails from "./features/boats/BoatDetails";
 import Home from "./features/home/home";
+import BoatsList from "./features/boatsList/boatsListPage";
+import BoatsListPage from "./features/boatsList/boatsListPage";
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
                   <Route index element={<Home />}/>
                   <Route path="weather"/>
                   <Route path="picture_gallery"/>
-                  <Route path="boats">
+                  <Route path="boats" element={<BoatsListPage />}>
                       <Route index/>
                       <Route path=":boatId" element={<BoatDetails />}>
                           <Route index/>

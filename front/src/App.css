@@ -133,4 +133,5 @@ p {
   color: var(--yellow-color)!important;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
 }

@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./features/layout/layout";
+import Schedule from "./features/schedule/schedule";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
                       <Route index/>
                       <Route path=":boatId">
                           <Route index/>
-                          <Route path="schedule"/>
+                          <Route path="schedule" element={<Schedule />}/>
                       </Route>
                   </Route>
               </Route>

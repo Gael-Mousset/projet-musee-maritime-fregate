@@ -7,9 +7,13 @@ use App\Repository\BoatRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     normalizationContext={"groups"={"boats:read"}},
+ *     denormalizationContext={"groups"={"boats:write"}}
+ * )
  * @ORM\Entity(repositoryClass=BoatRepository::class)
  */
 class Boat
@@ -23,96 +27,115 @@ class Boat
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"boats:read","boats:write","images:read"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="boolean")
+     * @Groups({"boats:read","boats:write"})
      */
     private $isAvailable;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups({"boats:read","boats:write"})
      */
     private $description;
 
     /**
      * @ORM\Column(type="text")
+     * @Groups({"boats:read","boats:write"})
      */
     private $history;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"boats:read","boats:write"})
      */
     private $nbPersonMax;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"boats:read","boats:write"})
      */
     private $openingHours;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"boats:read","boats:write"})
      */
     private $launchYear;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"boats:read","boats:write"})
      */
     private $type;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"boats:read","boats:write"})
      */
     private $material;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"boats:read","boats:write"})
      */
     private $buyingPrice;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"boats:read","boats:write"})
      */
     private $restoration;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"boats:read","boats:write"})
      */
     private $length;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"boats:read","boats:write"})
      */
     private $maxWidth;
 
     /**
      * @ORM\Column(type="string", length=255 , nullable=true)
+     * @Groups({"boats:read","boats:write"})
      */
     private $maxDraught;
 
     /**
      * @ORM\OneToMany(targetEntity=Image::class, mappedBy="boat")
+     * @Groups({"boats:read","boats:write"})
      */
     private $images;
 
     /**
      * @ORM\OneToMany(targetEntity=Reservation::class, mappedBy="boat", orphanRemoval=true)
+     * @Groups({"boats:read"})
      */
     private $reservations;
 
     /**
      * @ORM\OneToMany(targetEntity=Testimonial::class, mappedBy="boat")
+     * @Groups({"boats:read","boats:write"})
      */
     private $testimonials;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"boats:read","boats:write"})
      */
     private $lat;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"boats:read","boats:write"})
      */
     private $lon;
 

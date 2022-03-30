@@ -1,4 +1,5 @@
 import './App.css';
+import  "./features/windowOnload";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./features/layout/layout";
 import Schedule from "./features/schedule/schedule";

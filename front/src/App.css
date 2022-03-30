@@ -236,13 +236,17 @@ p {
   position: fixed;
   bottom: 0;
   width:100%;
-  z-index: 100000;
+  flex-direction: column;
+  z-index: 10000;
 }
 
 .Navbar a
 {
   text-decoration-line: none;
   color: white;
+  margin: 15px;
+  border-bottom: 1px #F2CF41 solid;
+  padding-bottom: 10px;
 }
 
 .Navbar a:hover
@@ -250,23 +254,10 @@ p {
   opacity: 75%;
 }
 
-.Navbar a
-{
-  margin: 15px;
-  border-bottom: 1px #F2CF41 solid;
-  padding-bottom: 10px;
-  /*background-color: aliceblue;*/
-}
-
 .Navbar div a
 {
   display: flex;
   justify-content: center;
-}
-
-#replier
-{
-  display: none;
 }
 
 #bouton {

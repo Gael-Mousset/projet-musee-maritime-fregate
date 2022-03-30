@@ -1,12 +1,6 @@
 import React from 'react';
 import './schedule.css';
 import '../../App.css';
-import './buttonEffect';
-
-//function buttonEffect(){
-//    document.getElementById('day-reservations').style.display = "flex";
-//}
-//document.getElementById('buttonResa').addEventListener('click',buttonEffect);
 
 const Schedule = () => {
 

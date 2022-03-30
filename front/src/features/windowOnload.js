@@ -1,4 +1,27 @@
-window.onload=function(){
+// fonction permettant d'afficher/cacher la navbar au clic de l'utilisateur
+function navBar()
+{
+    // récupération du bouton pour créer l'evenement au click sur celui-ci
+    let bouton = document.getElementById('bouton');
+
+    // récupération du conteneur (avec les liens) a déplier/replier
+    let nav = document.getElementById('replier');
+
+    // gestionnaire d'evenement au clic sur le bouton
+    bouton.onclick = function(e){
+
+        if(nav.style.display==="none"){
+
+            nav.style.display="block";
+
+        }else{
+            nav.style.display="none";
+        }
+    };
+}
+
+function buttonEffect()
+{
     // récupération du bouton pour créer l'evenement au click sur celui-ci
     let buttonDay = document.getElementById('buttonDay');
     let buttonReservMorn = document.getElementById('buttonReservMorn');
@@ -42,4 +65,9 @@ window.onload=function(){
             afternoonReserv.style.display="none";
         }
     };
+}
+
+window.onload=function (){
+    navBar();
+    buttonEffect();
 };

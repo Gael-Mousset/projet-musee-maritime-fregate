@@ -5,22 +5,23 @@ const BoatCards = () => {
     return (
         <>
             <div className="boatCardsContainer">
-                <div className="line">
-                    <BoatCard />
-                    <BoatCard />
-                </div>
-                <div className="line">
-                    <BoatCard />
-                    <BoatCard />
-                </div>
-                <div className="line">
-                    <BoatCard />
-                    <BoatCard />
-                </div>
-                <div className="line">
-                    <BoatCard />
-                    <BoatCard />
-                </div>
+                {/*<div className="line">*/}
+                {/*    <BoatCard />*/}
+                {/*    <BoatCard />*/}
+                {/*</div>*/}
+                {/*<div className="line">*/}
+                {/*    <BoatCard />*/}
+                {/*    <BoatCard />*/}
+                {/*</div>*/}
+                {/*<div className="line">*/}
+                {/*    <BoatCard />*/}
+                {/*    <BoatCard />*/}
+                {/*</div>*/}
+                {/*<div className="line">*/}
+                {/*    <BoatCard />*/}
+                {/*    <BoatCard />*/}
+                {/*</div>*/}
+                <BoatCard/>
             </div>
         </>
     )

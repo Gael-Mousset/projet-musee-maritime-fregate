@@ -12,10 +12,10 @@ const Schedule = () => {
 
     return(
         <>
-            <div className="imgHead"></div>
-            <h1>Planning</h1>
-            <div className="container">
-                <div className="titleContainer">Nom Bateau</div>
+            <div className="imgHeadSchedule"></div>
+            <h1 id={"h1Schedule"}>Planning</h1>
+            <div className="containerSchedule">
+                <div className="titleContainerSchedule">Nom Bateau</div>
                     <div id="schedule">
                         <div className="day">
 

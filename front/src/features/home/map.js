@@ -25,7 +25,6 @@ const Map = () => {
             .then(response => response.json())
             .then((value) => {
                 setBoats(value);
-                console.log(value);
             })
         },
         [])

@@ -10,7 +10,6 @@ const WeatherApiHome = () => {
         fetch(url)
             .then((response) => response.json())
             .then((value) => {
-                console.log(value);
                 setWeatherHome(value);
             })
             .catch((err) => {

@@ -4,7 +4,6 @@ import WeatherContainer from "./weatherContainer";
 const WeatherApi = () => {
     // URL de l'api météo
     const url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/la%20rochelle/next7days?unitGroup=metric&key=JDBNW7554CZTZM6WLLK72DGKW&contentType=json";
-    //console.log(url);
 
     // Creation élément state qui vas contenir le json retouner par l'api
     const [weather, setWeather] = useState(undefined);
@@ -14,9 +13,7 @@ const WeatherApi = () => {
         fetch(url)
             .then((response) => response.json())
             .then((value) => {
-                console.log(value);
                 setWeather(value);
-                //console.log(weather);
             })
             .catch((err) => {
                 console.log(err.message);

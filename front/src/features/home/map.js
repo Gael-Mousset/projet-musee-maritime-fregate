@@ -45,7 +45,7 @@ const Map = () => {
             return(
                 <Marker key={index} position={[boat.lat,boat.lon]}>
                     <Popup className="request-popup">
-                        <div className="titleBoat"> <a href={"https://takeb1nzyto.space/"}>{boat.name}</a></div>
+                        <div className="titleBoat"> <a href={"/boats/" + boat.id}>{boat.name}</a></div>
                         <p >{boat.description}</p>
                         {comeInBoat}
                     </Popup>

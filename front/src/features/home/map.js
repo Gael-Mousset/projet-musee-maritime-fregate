@@ -6,6 +6,7 @@ import styled from "styled-components";
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
+// ajout d'un icon pour la map, ici on utilise l'icon par default
 let DefaultIcon = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
@@ -14,9 +15,11 @@ let DefaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
+//fonction qui permet d'afficher la map ainsi que l'emplacement des bateaux en recuperant leurs informations via la base de donnée
 const Map = () => {
     let [boats, setBoats] = useState([]);
 
+    //fonction qui permet de recuperer tout les bateaux
     useEffect(()=>{
         fetch("http://localhost:8000/api/boats.json")
             .then(response => response.json())
@@ -28,8 +31,7 @@ const Map = () => {
         [])
 
 
-
-
+    // fonction boats.map qui permet de parcourir tout les bateaux en assignant un marqueur pour chaque bateau
     const renderedBoats = boats.map((boat, index )=>{
         let comeInBoat;
         if (boat.isAvailable == true)
@@ -53,7 +55,7 @@ const Map = () => {
             )
         });
 
-
+    // ce return envoie la map zoomé sur le musée maritime
     return (
         <>
             <div className="contentContainer">

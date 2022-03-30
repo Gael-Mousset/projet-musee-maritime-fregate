@@ -1,26 +1,11 @@
 import '../../boatsList_style.css';
 import BoatCard from "./boatCard";
 
+// Composant contenant toutes les "cartes bateau"
 const BoatCards = () => {
     return (
         <>
             <div className="boatCardsContainer">
-                {/*<div className="line">*/}
-                {/*    <BoatCard />*/}
-                {/*    <BoatCard />*/}
-                {/*</div>*/}
-                {/*<div className="line">*/}
-                {/*    <BoatCard />*/}
-                {/*    <BoatCard />*/}
-                {/*</div>*/}
-                {/*<div className="line">*/}
-                {/*    <BoatCard />*/}
-                {/*    <BoatCard />*/}
-                {/*</div>*/}
-                {/*<div className="line">*/}
-                {/*    <BoatCard />*/}
-                {/*    <BoatCard />*/}
-                {/*</div>*/}
                 <BoatCard/>
             </div>
         </>

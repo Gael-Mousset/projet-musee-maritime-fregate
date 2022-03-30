@@ -1,10 +1,11 @@
 import '../../boatsList_style.css';
 import {useEffect, useState} from "react";
 
+// Composant affichant une "carte bateau" pour chaque bateau de l'api
 const BoatCard = () => {
 
+    // Recuperation des donnees de chaque bateau depuis l'api
     let [boats, setBoats] = useState([]);
-
     useEffect(()=>{
         fetch("http://localhost:8000/api/boats.json")
             .then(response => response.json())
@@ -13,10 +14,11 @@ const BoatCard = () => {
             })
     }, []);
 
+    // Creation d'une "carte bateau" pour chaque bateau recupere
     const renderedBoats = boats.map((boat, index )=>{
         return(
                 <div key={index} className="card">
-                    <div className="imageBoatListContainer">
+                    <div className="imageBoatListContainer" style={{backgroundImage:`url(${boat.images[0]}.jpeg)`}}>
                     </div>
 
                     <div  className="cardTitle">
@@ -30,6 +32,7 @@ const BoatCard = () => {
         )
     });
 
+    // Affichage de toutes les "cartes bateau"
     return (
         <>
             {renderedBoats}

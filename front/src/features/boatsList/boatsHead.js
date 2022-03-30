@@ -1,6 +1,7 @@
 import '../../App.css';
 import '../../boatsList_style.css';
 
+// Composant contenant l'entete de la page
 const BoatsHead = () => {
     return (
         <>

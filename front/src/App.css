@@ -135,3 +135,13 @@ p {
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
+
+#validate {
+  width: 20px;
+  height: 20px;
+}
+
+#close {
+  width: 20px;
+  height: 20px;
+}

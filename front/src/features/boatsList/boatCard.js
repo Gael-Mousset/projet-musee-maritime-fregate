@@ -18,7 +18,8 @@ const BoatCard = () => {
     const renderedBoats = boats.map((boat, index )=>{
         return(
                 <div key={index} className="card">
-                    <div className="imageBoatListContainer" style={{backgroundImage:`url(${boat.images[0]}.jpeg)`}}>
+                    {/* backgroundImage a modifier si besoin */}
+                    <div className="imageBoatListContainer" style={{backgroundImage:`url(${boat.images[0].fileLocation}.jpeg)`}}>
                     </div>
 
                     <div  className="cardTitle">

@@ -1,4 +1,4 @@
-/* Importer weather */
+import WeatherApiHome from "./weatherApiHome";
 
 const PracticalInfo = () => {
 
@@ -68,6 +68,7 @@ const PracticalInfo = () => {
                 <div className="contentTitleContainer">
                     <p>Infos Pratiques</p>
                 </div>
+                <WeatherApiHome />
                 <p className="infoMusee">Le musée est actuellement <span style={stateColor}>{renderState}</span> ! <span>{renderReOpening}</span></p>
             </div>
         </>

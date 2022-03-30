@@ -227,6 +227,17 @@ p {
   color: var(--yellow-color)!important;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+#validate {
+  width: 20px;
+  height: 20px;
+}
+
+#close {
+  width: 20px;
+  height: 20px;
 }
 
 .Navbar

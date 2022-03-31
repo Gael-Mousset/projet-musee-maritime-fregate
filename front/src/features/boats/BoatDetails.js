@@ -16,7 +16,7 @@ const BoatDetails = () => {
             fetch("http://localhost:8000/api/boats/"+id+".json")
                 .then(response => response.json())
                 .then((value) => {
-                    console.log(value.images["0"])
+                    console.log(value.images["0"].fileLocation)
                     setBoats(value);
                 })
         },
@@ -26,15 +26,9 @@ const BoatDetails = () => {
 
     return (
         <>
-            {/*{*/}
-            {/*    boats !== undefined ? console.log(boats.images["0"]) : <></>*/}
-            {/*}*/}
-            {/*/!*url(../images/headerImage/france1Baniere.jpeg)*!/*/}
-
-            {/*{*/}
-            {/*    boats !== undefined ? <div id="ImageBoat" style={{ backgroundImage:`url(../${boats.images["0"]}.jpeg)` }}> </div>: <> </>*/}
-            {/*}*/}
-            <div id="ImageBoat"> </div>
+            {
+                boats !== undefined ? <div id="ImageBoat" style={{backgroundImage:`url(../${boats.images[0].fileLocation})`}}> </div> : <></>
+            }
             <BoatDescription boats={boats} />
             <BoatHistory boats={boats} />
             <BoatCharacteristics boats={boats} />

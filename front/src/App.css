@@ -27,6 +27,7 @@ body {
   background-position-y: 50%;
   display: grid !important;
   align-items: end !important;
+  position: relative;
 }
 
 .App-link {
@@ -163,6 +164,18 @@ p {
   color: var(--yellow-color);
 }
 
+.contentTitleHeaderContainer {
+  background-color: var(--yellow-color);
+  border-radius: 10px;
+  padding: 1em 3.125em;
+  color: var(--dark-blue-color);
+  font-weight: bold;
+  width: 9em;
+  position: absolute;
+  bottom: -25px;
+  left: 5%;
+}
+
 .infoMusee {
   color: var(--yellow-color);
   margin: 1em;
@@ -177,6 +190,7 @@ p {
   flex-direction: row;
   width: 275px;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
 
 .meteo {
@@ -196,6 +210,9 @@ p {
   color: var(--dark-blue-color);
   font-weight: bold;
 }
+.imgMeteo{
+  height: 3em;
+}
 
 .request-popup p{
   font-size: 100%;
@@ -210,4 +227,50 @@ p {
   color: var(--yellow-color)!important;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+#validate {
+  width: 20px;
+  height: 20px;
+}
+
+#close {
+  width: 20px;
+  height: 20px;
+}
+
+.Navbar
+{
+  background-color: #242424;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  flex-direction: column;
+  z-index: 10000;
+}
+
+.Navbar a
+{
+  text-decoration-line: none;
+  color: white;
+  margin: 15px;
+  border-bottom: 1px #F2CF41 solid;
+  padding-bottom: 10px;
+}
+
+.Navbar a:hover
+{
+  opacity: 75%;
+}
+
+.Navbar div a
+{
+  display: flex;
+  justify-content: center;
+}
+
+#bouton {
+  padding: 10px;
 }

@@ -19,16 +19,16 @@ const BoatCard = () => {
         return(
                 <div key={index} className="card">
                     {/* backgroundImage a modifier si besoin */}
-                    <div className="imageBoatListContainer" style={{backgroundImage:`url(${boat.images[0].fileLocation}.jpeg)`}}>
+                    <div className="imageBoatListContainer" style={{backgroundImage:`url(${boat.images[0].fileLocation})`}}>
                     </div>
 
                     <div  className="cardTitle">
                         {boat.name}
                     </div>
 
-                    <button className="detailsButton">
+                    <a href={"/boats/" + boat.id} className="detailsButton">
                         Détails
-                    </button>
+                    </a>
                 </div>
         )
     });

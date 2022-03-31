@@ -5,9 +5,14 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\ReservationRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     normalizationContext={"groups"={"reservations:read"}},
+ *     denormalizationContext={"groups"={"reservations:write"}}
+ * )
  * @ORM\Entity(repositoryClass=ReservationRepository::class)
  */
 class Reservation
@@ -21,47 +26,64 @@ class Reservation
 
     /**
      * @ORM\Column(type="date")
+     * @Groups({"reservations:read","reservations:write","boats:read"})
+     * @Assert\NotBlank()
      */
     private $date;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"reservations:read","reservations:write","boats:read"})
+     * @Assert\NotBlank()
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"reservations:read","reservations:write","boats:read"})
+     * @Assert\NotBlank()
      */
     private $lastName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"reservations:read","reservations:write","boats:read"})
+     * @Assert\NotBlank()
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"reservations:read","reservations:write","boats:read"})
      */
     private $phone;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"reservations:read","reservations:write","boats:read"})
+     * @Assert\NotBlank()
      */
     private $nbPerson;
 
     /**
      * @ORM\Column(type="time")
+     * @Groups({"reservations:read","reservations:write","boats:read"})
+     * @Assert\NotBlank()
      */
     private $startHour;
 
     /**
      * @ORM\Column(type="time")
+     * @Groups({"reservations:read","reservations:write","boats:read"})
+     * @Assert\NotBlank()
      */
     private $endHour;
 
     /**
      * @ORM\ManyToOne(targetEntity=Boat::class, inversedBy="reservations")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"reservations:read","reservations:write"})
+     * @Assert\Valid()
      */
     private $boat;
 

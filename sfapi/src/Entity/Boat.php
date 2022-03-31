@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ApiResource(
@@ -27,13 +28,15 @@ class Boat
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"boats:read","boats:write","images:read"})
+     * @Groups({"boats:read","boats:write","images:read","reservations:read","testimonials:read"})
+     * @Assert\NotBlank()
      */
     private $name;
 
     /**
      * @ORM\Column(type="boolean")
      * @Groups({"boats:read","boats:write"})
+     * @Assert\NotBlank()
      */
     private $isAvailable;
 
@@ -52,12 +55,14 @@ class Boat
     /**
      * @ORM\Column(type="integer")
      * @Groups({"boats:read","boats:write"})
+     * @Assert\NotBlank()
      */
     private $nbPersonMax;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups({"boats:read","boats:write"})
+     * @Assert\NotBlank()
      */
     private $openingHours;
 
@@ -130,12 +135,14 @@ class Boat
     /**
      * @ORM\Column(type="float")
      * @Groups({"boats:read","boats:write"})
+     * @Assert\NotBlank()
      */
     private $lat;
 
     /**
      * @ORM\Column(type="float")
      * @Groups({"boats:read","boats:write"})
+     * @Assert\NotBlank()
      */
     private $lon;
 

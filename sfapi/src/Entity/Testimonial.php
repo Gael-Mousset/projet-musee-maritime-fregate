@@ -5,9 +5,14 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\TestimonialRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     normalizationContext={"groups"={"testimonials:read"}},
+ *     denormalizationContext={"groups"={"testimonials:write"}}
+ * )
  * @ORM\Entity(repositoryClass=TestimonialRepository::class)
  */
 class Testimonial
@@ -21,31 +26,40 @@ class Testimonial
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"testimonials:read","testimonials:write","boats:read"})
+     * @Assert\NotBlank()
      */
     private $author;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"testimonials:read","testimonials:write","boats:read"})
+     * @Assert\NotBlank()
      */
     private $title;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups({"testimonials:read","testimonials:write","boats:read"})
      */
     private $story;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"testimonials:read","testimonials:write","boats:read"})
      */
     private $picture;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"testimonials:read","testimonials:write","boats:read"})
      */
     private $audio;
 
     /**
      * @ORM\ManyToOne(targetEntity=Boat::class, inversedBy="testimonials")
+     * @Groups({"testimonials:read","testimonials:write"})
+     * @Assert\Valid()
      */
     private $boat;
 

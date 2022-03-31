@@ -135,7 +135,7 @@ Le 30 mars 2017, le Manuel Joël coule dans le bassin des Chalutiers du musée m
         $manager->persist($Manuel_Joel);
 
         $Leverger = new Boat();
-        $Leverger->setName("Capitaine de frégate Leverger");
+        $Leverger->setName("Leverger");
         $Leverger->setIsAvailable(true);
         $Leverger->setLat(46.150787);
         $Leverger->setLon(-1.152053);
@@ -195,17 +195,37 @@ Cette vedette est, en réalité, le canot-major de l'escorteur d'escadre Duperr�
         $Philippe_Tijou = new Testimonial();
         $Philippe_Tijou->setAuthor("Photo Philippe Tijou, correspondant patrimoine maritime, DRAC Poitou-Charentes");
         $Philippe_Tijou->setTitle("Manuel-Joël - Travaux 2010");
-        $Philippe_Tijou->setPicture("images/testimonial/joel.jpeg");
+        $Philippe_Tijou->setPicture("images/testimonials/joel.jpeg");
         $Philippe_Tijou->setBoat($Manuel_Joel);
         $manager->persist($Philippe_Tijou);
 
-        //Leverger pas de témoignage
+        $Michel_Bastard = new Testimonial();
+        $Michel_Bastard->setAuthor("Michel Bastard");
+        $Michel_Bastard->setTitle("Le Maori des Messageries Maritimes, vient saluer le France 1 avant de sombrer 10 heures plus tard, avec tout son équipage (39 hommes). Il n'y eut qu'un seul rescapé.");
+        $Michel_Bastard->setPicture("images/testimonials/maori.jpg");
+        $Michel_Bastard->setBoat($France1);
+        $manager->persist($Michel_Bastard);
 
-        //Vedette Duperré existe pas
+        $MarieClaire_Marlin = new Testimonial();
+        $MarieClaire_Marlin->setAuthor("Marie-Claire Marlin");
+        $MarieClaire_Marlin->setTitle("Joshua et le Belem.");
+        $MarieClaire_Marlin->setPicture("images/testimonials/belem_joshua_1.jpg");
+        $MarieClaire_Marlin->setBoat($Joshua);
+        $manager->persist($MarieClaire_Marlin);
 
-        //france 1 audio
+        $son1 = new Testimonial();
+        $son1->setAuthor("Microsoft");
+        $son1->setTitle("Son Windows XP");
+        $son1->setAudio("images/testimonials/son1.mp3");
+        $son1->setBoat($Leverger);
+        $manager->persist($son1);
 
-        //joshua audio
+        $son2 = new Testimonial();
+        $son2->setAuthor("Baloo");
+        $son2->setTitle("Il en faut peut pour être heureux");
+        $son2->setAudio("images/testimonials/baloo.mp3");
+        $son2->setBoat($Vedette_Duperre);
+        $manager->persist($son2);
 
         //Images
         $France1Image = new Image();

@@ -6,6 +6,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\ImageRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ApiResource(
@@ -26,12 +27,14 @@ class Image
     /**
      * @ORM\Column(type="string", length=255)
      * @Groups({"images:read","images:write","boats:read"})
+     * @Assert\NotBlank()
      */
     private $fileLocation;
 
     /**
      * @ORM\ManyToOne(targetEntity=Boat::class, inversedBy="images")
      * @Groups ({"images:read","images:write"})
+     * @Assert\Valid()
      */
     private $boat;
 

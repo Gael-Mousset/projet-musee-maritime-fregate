@@ -8,6 +8,7 @@ import Home from "./features/home/home";
 import BoatsListPage from "./features/boatsList/boatsListPage";
 import Schedule from "./features/schedule/schedule";
 import WeatherPage from "./features/weather/weatherPage";
+import BoatDetailsLayout from "./features/boats/BoatDetailsLayout";
 
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
                   <Route path="picture_gallery"/>
                   <Route path="boats" element={<BoatLayout />}>
                       <Route index element={<BoatsListPage />}/>
-                      <Route path=":boatId" element={<BoatDetails />}>
-                          <Route index/>
+                      <Route path=":boatId" element={<BoatDetailsLayout />}>
+                          <Route index element={<BoatDetails />} />
                           <Route path="schedule" element={<Schedule />}/>
                       </Route>
                   </Route>

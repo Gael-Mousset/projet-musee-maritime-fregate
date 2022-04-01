@@ -8,7 +8,7 @@ const BoatHistory = (props) => {
                 </div>
                 <div id="Barre"> </div>
             </div>
-            <div id="Description">
+            <div id="History">
                 {
                     props !== undefined ?<p>{props.boats.history}</p> :<></>
                 }

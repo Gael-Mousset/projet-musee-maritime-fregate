@@ -4,31 +4,35 @@ import { useParams } from "react-router-dom";
 import BoatCharacteristics from "./BoatCharacteristics";
 import BoatHistory from "./BoatHistory";
 import BoatDescription from "./BoatDescription";
+import BoatHeader from "./BoatHeader";
 
 const BoatDetails = () => {
 
     let id  = useParams().boatId;
-    console.log(id);
 
     let [boats, setBoats] = useState([]);
 
     useEffect(() => {
-            fetch("http://localhost:8000/api/boats/"+id+".json")
-                .then(response => response.json())
-                .then((value) => {
-                    console.log(value.images["0"].fileLocation)
-                    setBoats(value);
-                })
-        },
-        [])
+        // declare the async data fetching function
+        const fetchData = async () => {
+            // get the data from the api
+            const data = await fetch(`http://localhost:8000/api/boats/${id}.json`);
+            // convert the data to json
+            const json = await data.json();
 
-    //console.log(boats.images[0])
+            // set state with the result
+            setBoats(json);
+        }
+
+        // call the function
+        fetchData()
+            // make sure to catch any error
+            .catch(console.error);
+    }, [id])
 
     return (
         <>
-            {
-                boats !== undefined ? <div id="ImageBoat" style={{backgroundImage:`url(../${boats.images[0].fileLocation})`}}> </div> : <></>
-            }
+            <BoatHeader boats={boats} />
             <BoatDescription boats={boats} />
             <BoatHistory boats={boats} />
             <BoatCharacteristics boats={boats} />

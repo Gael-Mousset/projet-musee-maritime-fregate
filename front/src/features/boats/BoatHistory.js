@@ -1,5 +1,7 @@
 const BoatHistory = (props) => {
 
+    const historyHTML = props.boats.history;
+
     return (
         <>
             <div id="WithBarre">
@@ -8,10 +10,8 @@ const BoatHistory = (props) => {
                 </div>
                 <div id="Barre"> </div>
             </div>
-            <div id="History">
-                {
-                    props !== undefined ?<p>{props.boats.history}</p> :<></>
-                }
+            <div id="History" dangerouslySetInnerHTML={{ __html: historyHTML }} >
+
             </div>
         </>
     )

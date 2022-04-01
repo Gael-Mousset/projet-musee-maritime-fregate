@@ -79,14 +79,18 @@ body {
 
 #History{
   margin: 15px;
+  color: #F2CF41;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.5em;
 }
 
-#Description p, #History > p
+#Description p
 {
   color: #F2CF41;
   text-align: left;
   font-size: 15px;
-
+  line-height: 1.5em;
 }
 
 #SousTitle

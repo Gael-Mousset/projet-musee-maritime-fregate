@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Serializer\Annotation\SerializedName;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -49,7 +50,7 @@ class Boat
 
     /**
      * @ORM\Column(type="text")
-     * @Groups({"boats:read","boats:write"})
+     * @Groups({"boats:read"})
      */
     private $history;
 
@@ -204,6 +205,17 @@ class Boat
     {
         $this->history = $history;
 
+        return $this;
+    }
+
+    /**
+     * History text html of a Boat
+     * @Groups({"boats:write"})
+     * @SerializedName("history")
+     */
+    public function setTextHistory(string $textHistory): self
+    {
+        $this->history = nl2br($textHistory);
         return $this;
     }
 

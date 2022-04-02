@@ -8,7 +8,7 @@ function navBar()
     let nav = document.getElementById('replier');
 
     // gestionnaire d'evenement au clic sur le bouton
-    bouton.onclick = function(e){
+    bouton.onclick = function(){
 
         if(nav.style.display==="none"){
 
@@ -34,7 +34,7 @@ function buttonEffect()
     let afternoonReserv = document.getElementById('afternoonReserv');
 
     // gestionnaire d'evenement au clic sur le bouton
-    buttonDay.onclick = function(e){
+    buttonDay.onclick = function(){
 
         if(morning.style.display==="none"){
             morning.style.display="flex";
@@ -46,7 +46,7 @@ function buttonEffect()
         }
     };
 
-    buttonReservMorn.onclick = function(e){
+    buttonReservMorn.onclick = function(){
 
         if(morningReserv.style.display==="none"){
             morningReserv.style.display="flex";
@@ -56,7 +56,7 @@ function buttonEffect()
         }
     };
 
-    buttonReservAfter.onclick = function(e){
+    buttonReservAfter.onclick = function(){
 
         if(afternoonReserv.style.display==="none"){
             afternoonReserv.style.display="flex";

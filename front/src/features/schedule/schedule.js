@@ -1,15 +1,36 @@
 import React from 'react';
 import './schedule.css';
 import '../../App.css';
+import {useParams} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 const Schedule = () => {
+
+    let id  = useParams().boatId;
+
+    let [boat, setBoat] = useState([]);
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+
+            const data = await fetch(`http://localhost:8000/api/boats/${id}.json`);
+            const json = await data.json();
+
+            setBoat(json);
+        }
+
+        fetchData()
+
+            .catch(console.error);
+    }, [id])
 
     return(
         <>
             <div className="imgHeadSchedule"></div>
             <h1 id={"h1Schedule"}>Planning</h1>
             <div className="containerSchedule">
-                <div className="titleContainerSchedule">Nom Bateau</div>
+                <div className="titleContainerSchedule">{boat.name}</div>
                     <div id="schedule">
                         <div className="day">
 

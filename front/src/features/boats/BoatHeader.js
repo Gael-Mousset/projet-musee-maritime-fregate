@@ -1,21 +1,20 @@
 const BoatHeader = (props) => {
 
-    let urlbato;
+    let boatImageUrl;
     if (props !== undefined)
     {
-        urlbato = props.boats.images;
-        console.log(urlbato);
+        boatImageUrl = props.boats.images;
     }
     else
     {
-        urlbato = undefined;
+        boatImageUrl = undefined;
     }
 
     return (
         <>
             <div className="headerContainer">
                 {
-                    urlbato !== undefined ?<div id="ImageBoat" style={{backgroundImage:`url(../${urlbato[0].fileLocation})`}}> </div> :<></>
+                    boatImageUrl !== undefined ?<div id="ImageBoat" style={{backgroundImage:`url(../${boatImageUrl[0].fileLocation})`}}> </div> :<></>
                 }
                 <div className="contentTitleHeaderContainer">
                     <p className="titleHeader">{props.boats.name}</p>

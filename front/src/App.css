@@ -95,7 +95,7 @@ body {
 
 #SousTitle
 {
-  padding-left: 1em;
+  padding: 0.25em 0.25em 0.25em 1em ;
   width: 45%;
   border-radius: 0 10px 10px 0;
   background-color: #F2CF41;
@@ -305,4 +305,63 @@ td{
 th{
   padding:10px;
   text-align:right;
+}
+
+.testimonialsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonialContainer {
+  margin: 50px 15px 15px 15px;
+  width: 90%;
+  background-color: #8a93a8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.testimonialTitleContainer {
+  background-color: var(--yellow-color);
+  border-radius: 10px;
+  padding: 15px 30px;
+  color: var(--dark-blue-color);
+  font-weight: bold;
+  width: 14em;
+  position: absolute;
+  top: -25px;
+  text-align: center;
+  font-size: large;
+}
+
+.testimonialTitle {
+  margin-top: 30px;
+  padding: 15px;
+  font-weight: bold;
+  color: var(--dark-blue-color);
+}
+
+.testimonialStory {
+  margin: 15px;
+  color: var(--dark-blue-color);
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+.testimonialPicture {
+  margin: 15px;
+}
+
+.testimonialPicture > img {
+  width: 300px;
+}
+
+.testimonialAudio {
+  border-radius: 50px;
+  margin: 15px;
 }

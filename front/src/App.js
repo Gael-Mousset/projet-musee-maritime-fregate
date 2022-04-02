@@ -9,6 +9,7 @@ import BoatsListPage from "./features/boatsList/boatsListPage";
 import Schedule from "./features/schedule/schedule";
 import WeatherPage from "./features/weather/weatherPage";
 import BoatDetailsLayout from "./features/boats/BoatDetailsLayout";
+import PictureGalleryPage from "./features/pictureGallery/PictureGalleryPage";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
               <Route path="/" element={<Layout />}>
                   <Route index element={<Home />}/>
                   <Route path="weather" element={<WeatherPage />}/>
-                  <Route path="picture_gallery"/>
+                  <Route path="picture_gallery" element={<PictureGalleryPage />}/>
                   <Route path="boats" element={<BoatLayout />}>
                       <Route index element={<BoatsListPage />}/>
                       <Route path=":boatId" element={<BoatDetailsLayout />}>

@@ -15,8 +15,8 @@ const BoatTestimonials = (props) => {
         {
             renderTestimonials = props.boats.testimonials.map((testimonial) => {
                 return <>
-                    <div className="testimonialContainer">
-                        <div className="testimonialTitleContainer">
+                    <div className="dataContentContainer">
+                        <div className="dataContentTitleContainer">
                             {
                                 (testimonial.picture)?<>{"Photo de "}{testimonial.author}</> :<>{testimonial.author}</>
                             }

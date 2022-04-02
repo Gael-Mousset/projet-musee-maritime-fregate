@@ -193,7 +193,7 @@ Cette vedette est, en réalité, le canot-major de l'escorteur d'escadre Duperr�
         $manager->persist($Maurice_Garet);
 
         $Philippe_Tijou = new Testimonial();
-        $Philippe_Tijou->setAuthor("Photo Philippe Tijou, correspondant patrimoine maritime, DRAC Poitou-Charentes");
+        $Philippe_Tijou->setAuthor("Philippe Tijou");
         $Philippe_Tijou->setTitle("Manuel-Joël - Travaux 2010");
         $Philippe_Tijou->setPicture("images/testimonials/joel.jpeg");
         $Philippe_Tijou->setBoat($Manuel_Joel);

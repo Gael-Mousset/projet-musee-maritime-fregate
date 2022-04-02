@@ -5,6 +5,7 @@ import BoatCharacteristics from "./BoatCharacteristics";
 import BoatHistory from "./BoatHistory";
 import BoatDescription from "./BoatDescription";
 import BoatHeader from "./BoatHeader";
+import BoatTestimonials from "./BoatTestimonials";
 
 const BoatDetails = () => {
 
@@ -36,6 +37,7 @@ const BoatDetails = () => {
             <BoatDescription boats={boats} />
             <BoatHistory boats={boats} />
             <BoatCharacteristics boats={boats} />
+            <BoatTestimonials boats={boats} />
         </>
 
     )

@@ -315,6 +315,7 @@ th{
 }
 
 .dataContentContainer {
+  width: 90%;
   margin: 50px 15px 15px 15px;
   background-color: #8a93a8;
   position: relative;
@@ -330,7 +331,7 @@ th{
   padding: 15px 30px;
   color: var(--dark-blue-color);
   font-weight: bold;
-  width: 14em;
+  width: 13em;
   position: absolute;
   top: -25px;
   text-align: center;

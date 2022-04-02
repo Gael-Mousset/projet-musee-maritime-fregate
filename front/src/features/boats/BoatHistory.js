@@ -1,6 +1,6 @@
 const BoatHistory = (props) => {
 
-    const historyHTML = props.boats.history;
+    const historyHTML = props.boat.history;
 
     return (
         <>

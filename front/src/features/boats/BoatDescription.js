@@ -5,7 +5,7 @@ const BoatDescription = (props) => {
             {
                 props !== undefined ?<tr>
                     {
-                        (props.boats.description)?<><div id="Description"><p>{props.boats.description}</p></div></> :<></>
+                        (props.boat.description)?<><div id="Description"><p>{props.boat.description}</p></div></> :<></>
                     }
                 </tr> :<></>
             }

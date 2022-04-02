@@ -12,7 +12,7 @@ const BoatDetails = () => {
 
     let id  = useParams().boatId;
 
-    let [boats, setBoats] = useState([]);
+    let [boat, setBoat] = useState([]);
 
     useEffect(() => {
         // declare the async data fetching function
@@ -23,7 +23,7 @@ const BoatDetails = () => {
             const json = await data.json();
 
             // set state with the result
-            setBoats(json);
+            setBoat(json);
         }
 
         // call the function
@@ -34,13 +34,13 @@ const BoatDetails = () => {
 
     return (
         <>
-            <BoatHeader boats={boats} />
-            <BoatDescription boats={boats} />
-            <BoatHistory boats={boats} />
-            <BoatCharacteristics boats={boats} />
-            <BoatTestimonials boats={boats} />
+            <BoatHeader boat={boat} />
+            <BoatDescription boat={boat} />
+            <BoatHistory boat={boat} />
+            <BoatCharacteristics boat={boat} />
+            <BoatTestimonials boat={boat} />
             <div className="scheduleButtonContainer">
-                <a href={"/boats/"+id+"/schedule"} className="scheduleButton">Planning<span className="arrow"><ArrowForwardIcon/></span></a>
+                <a href={"/boat/"+id+"/schedule"} className="scheduleButton">Planning<span className="arrow"><ArrowForwardIcon/></span></a>
             </div>
         </>
 

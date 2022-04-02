@@ -3,7 +3,7 @@ const BoatHeader = (props) => {
     let boatImageUrl;
     if (props !== undefined)
     {
-        boatImageUrl = props.boats.images;
+        boatImageUrl = props.boat.images;
     }
     else
     {
@@ -17,7 +17,7 @@ const BoatHeader = (props) => {
                     boatImageUrl !== undefined ?<div id="ImageBoat" style={{backgroundImage:`url(../${boatImageUrl[0].fileLocation})`}}> </div> :<></>
                 }
                 <div className="contentTitleHeaderContainer">
-                    <p className="titleHeader">{props.boats.name}</p>
+                    <p className="titleHeader">{props.boat.name}</p>
                 </div>
             </div>
         </>

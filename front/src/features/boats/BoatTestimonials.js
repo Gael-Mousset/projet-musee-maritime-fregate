@@ -11,9 +11,9 @@ const BoatTestimonials = (props) => {
     * */
     if (props !== undefined)
     {
-        if (props.boats.testimonials !== undefined)
+        if (props.boat.testimonials !== undefined)
         {
-            renderTestimonials = props.boats.testimonials.map((testimonial) => {
+            renderTestimonials = props.boat.testimonials.map((testimonial) => {
                 return <>
                     <div className="dataContentContainer">
                         <div className="dataContentTitleContainer">

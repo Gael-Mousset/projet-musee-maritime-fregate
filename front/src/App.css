@@ -314,9 +314,8 @@ th{
   align-items: center;
 }
 
-.testimonialContainer {
+.dataContentContainer {
   margin: 50px 15px 15px 15px;
-  width: 90%;
   background-color: #8a93a8;
   position: relative;
   display: flex;
@@ -325,7 +324,7 @@ th{
   border-radius: 10px;
 }
 
-.testimonialTitleContainer {
+.dataContentTitleContainer {
   background-color: var(--yellow-color);
   border-radius: 10px;
   padding: 15px 30px;
@@ -364,4 +363,16 @@ th{
 .testimonialAudio {
   border-radius: 50px;
   margin: 15px;
+}
+
+.imageGalleryConstainer {
+  margin-top: 35px;
+}
+
+.imageGallery {
+  margin: 15px;
+}
+
+.imageGallery > img {
+  width: 300px;
 }

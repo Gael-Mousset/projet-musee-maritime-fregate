@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import BoatCharacteristics from "./BoatCharacteristics";
 import BoatHistory from "./BoatHistory";
@@ -38,6 +39,9 @@ const BoatDetails = () => {
             <BoatHistory boats={boats} />
             <BoatCharacteristics boats={boats} />
             <BoatTestimonials boats={boats} />
+            <div className="scheduleButtonContainer">
+                <a href={"/boats/"+id+"/schedule"} className="scheduleButton">Planning<span className="arrow"><ArrowForwardIcon/></span></a>
+            </div>
         </>
 
     )

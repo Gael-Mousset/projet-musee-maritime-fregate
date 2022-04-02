@@ -2,31 +2,53 @@
 
 + Tout d'abord il faut cloner le projet :
 
-```bash git clone https://forge.iut-larochelle.fr/tjamard/2021-2022-info2-dw-projet-musee-maritime-fregate.git ```
+```bash 
+git clone https://forge.iut-larochelle.fr/tjamard/2021-2022-info2-dw-projet-musee-maritime-fregate.git 
+```
 
 + Ce positioner dans le projet :
 
-```bash cd 2021-2022-info2-dw-projet-musee-maritime-fregate ```
+```bash 
+cd 2021-2022-info2-dw-projet-musee-maritime-fregate 
+```
 
 + Il faut par la suite lancer docker : 
 
-```bash docker-compose up --build ```
+```bash 
+docker-compose up --build -d
+```
 
-+ Ouvrir un nouveau terminal et ce positionner a nouveau dans le projet
++ Ouvrir un nouveau terminal et ce positionner à nouveau dans le projet
 
-+ Une fois a nouveau dans le projet, il faut entrer dans le container :
++ Une fois à nouveau dans le projet, il faut entrer dans le conteneur :
 
-```bash docker-compose exec php-fpm bash ```
+```bash 
+docker-compose exec php-fpm bash 
+```
 
-+ Une fois dans le container effectuer les differentes commandes dans l'ordre :
++ Une fois dans le conteneur se positionner dans le répértoire `sfapi` :
 
-```bash cd sfapi ```
+```bash 
+cd sfapi 
+```
 
-```bash composer install ```
++ Installer les dépendances du projet :
 
-```bash php bin/console d:m:m ```
+```bash 
+composer install 
+```
 
-```bash php bin/console d:f:l ```
++ Éffectuer les migrations :
 
-+ Il vous suffit d'aller sur l'url [localhost:3000](localhost:3000)
+```bash 
+php bin/console d:m:m 
+```
+
++ Lancer la fixture : 
+
+```bash 
+php bin/console d:f:l 
+```
+
++ Il vous suffit ensuite d'aller sur l'url : <http://localhost:3000>
 
